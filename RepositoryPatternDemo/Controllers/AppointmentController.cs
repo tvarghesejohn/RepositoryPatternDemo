@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RepositoryPatternDemo.Models;
+using RepositoryPatternDemo.DL;
 using RepositoryPatternDemo.Services.IServices;
 using System.Collections.Generic;
 

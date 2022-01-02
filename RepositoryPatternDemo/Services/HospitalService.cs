@@ -1,5 +1,5 @@
-﻿using RepositoryPatternDemo.IRepositories;
-using RepositoryPatternDemo.Models;
+﻿using RepositoryPatternDemo.DL;
+using RepositoryPatternDemo.IRepositories;
 using RepositoryPatternDemo.Services.IServices;
 using System.Collections.Generic;
 

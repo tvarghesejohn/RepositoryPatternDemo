@@ -7,10 +7,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using RepositoryPatternDemo.DL;
 using RepositoryPatternDemo.EFRepositories;
 using RepositoryPatternDemo.IRepositories;
 using RepositoryPatternDemo.IServices;
-using RepositoryPatternDemo.Models;
 using RepositoryPatternDemo.Repositories.EFRepositories;
 using RepositoryPatternDemo.Services;
 using RepositoryPatternDemo.Services.IServices;
@@ -33,7 +33,7 @@ namespace RepositoryPatternDemo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<HOSPITALDBContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IBaseRepository<Patient>, EFPatientRepository>();
             services.AddScoped<IBaseRepository<Doctor>, EfDoctorRepository>();

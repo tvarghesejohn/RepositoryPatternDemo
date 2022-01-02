@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Repositories\AdoRepositories\**" />
+    <Content Remove="Repositories\AdoRepositories\**" />
+    <EmbeddedResource Remove="Repositories\AdoRepositories\**" />
+    <None Remove="Repositories\AdoRepositories\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 

@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using RepositoryPatternDemo.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using RepositoryPatternDemo.DL;
 using RepositoryPatternDemo.Services.IServices;
 using System.Collections.Generic;
 
@@ -31,8 +30,8 @@ namespace RepositoryPatternDemo.Controllers
             return result;
         }
 
-        [HttpPost("AddHospital/{hospital}")]
-        public ActionResult<Patient> AddHospital(Hospital hospital)
+        [HttpPost("AddHospital")]
+        public ActionResult<Patient> AddHospital([FromBody] Hospital hospital)
         {
             var result = _hospitalService.AddHospital(hospital);
             if (result == "sucess")
@@ -45,8 +44,8 @@ namespace RepositoryPatternDemo.Controllers
             }
         }
 
-        [HttpPost("UpdateHospital/{hospital}")]
-        public ActionResult<Hospital> UpdateHospital(Hospital hospital)
+        [HttpPost("UpdateHospital")]
+        public ActionResult<Hospital> UpdateHospital([FromBody] Hospital hospital)
         {
             var result = _hospitalService.UpdateHospital(hospital);
             if (result == "sucess")

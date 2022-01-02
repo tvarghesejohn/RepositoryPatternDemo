@@ -1,12 +1,12 @@
-﻿using RepositoryPatternDemo.Models;
+﻿using RepositoryPatternDemo.DL;
 
 namespace RepositoryPatternDemo.Repositories.EFRepositories
 {
     public class EfHospitalRepository : EfBaseRepository<Hospital>
     {
-        private readonly ApplicationDbContext _context;
+        private readonly HOSPITALDBContext _context;
 
-        public EfHospitalRepository(ApplicationDbContext context) : base(context)
+        public EfHospitalRepository(HOSPITALDBContext context) : base(context)
         {
             _context = context;
         }

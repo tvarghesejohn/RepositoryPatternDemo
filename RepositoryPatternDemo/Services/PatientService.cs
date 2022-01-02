@@ -1,6 +1,6 @@
-﻿using RepositoryPatternDemo.IRepositories;
+﻿using RepositoryPatternDemo.DL;
+using RepositoryPatternDemo.IRepositories;
 using RepositoryPatternDemo.IServices;
-using RepositoryPatternDemo.Models;
 using System.Collections.Generic;
 
 namespace RepositoryPatternDemo.Services

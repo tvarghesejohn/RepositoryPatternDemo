@@ -1,16 +1,17 @@
-﻿using RepositoryPatternDemo.IRepositories;
-using RepositoryPatternDemo.Models;
+﻿using RepositoryPatternDemo.DL;
+using RepositoryPatternDemo.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using BaseModel = RepositoryPatternDemo.DL.BaseModel;
 
 namespace RepositoryPatternDemo.Repositories.EFRepositories
 {
     public abstract class EfBaseRepository<T> : IBaseRepository<T> where T : BaseModel
     {
-        private readonly ApplicationDbContext _context;
+        private readonly HOSPITALDBContext _context;
 
-        public EfBaseRepository(ApplicationDbContext context)
+        public EfBaseRepository(HOSPITALDBContext context)
         {
             _context = context;
         }

@@ -1,4 +1,4 @@
-﻿using RepositoryPatternDemo.Models;
+﻿using RepositoryPatternDemo.DL;
 using System.Collections.Generic;
 
 namespace RepositoryPatternDemo.Services.IServices
