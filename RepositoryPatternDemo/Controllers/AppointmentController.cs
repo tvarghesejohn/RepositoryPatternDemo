@@ -31,8 +31,8 @@ namespace RepositoryPatternDemo.Controllers
             return result;
         }
 
-        [HttpPost("AddAppointment/{appointment}")]
-        public ActionResult<Appointment> AddAppointment(Appointment appointment)
+        [HttpPost("AddAppointment")]
+        public ActionResult<Appointment> AddAppointment([FromBody]Appointment appointment)
         {
             var result = _appointmentService.AddAppointment(appointment);
             if (result == "sucess")
@@ -45,8 +45,8 @@ namespace RepositoryPatternDemo.Controllers
             }
         }
 
-        [HttpPost("UpdateAppointment/{appointment}")]
-        public ActionResult<Appointment> UpdateAppointment(Appointment appointment)
+        [HttpPost("UpdateAppointment")]
+        public ActionResult<Appointment> UpdateAppointment([FromBody] Appointment appointment)
         {
             var result = _appointmentService.UpdateAppointment(appointment);
             if (result == "sucess")
